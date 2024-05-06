@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+header{
+    background-color: #5f27cd;/*cor de fundo*/
+    padding: 16px 0;/*espaçamento*/
+    color: #fff;/*cor de texto*/
+    display: flex;/*podemos manipular todos os elementos*/
+border-bottom: 16px solid #341f97;/*bordar*/
+justify-content: center;/*alinhar o conteúdo*/
+text-transform: uppercase;/*deixar o texto em maiúsculo*/
+font-style: italic;/*mudando a fonto do texto para ítalico*/
+}
+
+/*modificação na parte do botão*/
+header button{
+    margin-left: 16px;
+}
+
+form{
+    background-color:#c7d2df;/*cor de fundo*/
+    padding: 24px 0;/*espaçamento para cima e para baixo de 24 e 0 para as laterais*/
+    text-align: center;/*alinhamento de texto*/
+    display: none;/*remove o elemento do documento (DOM) e não ocupa espaço no layout*/
+}
+
+/*separação do título (inserir nova imagem)*/
+form h2{
+    margin-bottom: 16px;
+}
+
+/*separação (URL - e os botões)*/
+input, button{
+    padding: 8px;/*espaçamento*/
+}
+
+
+button{
+    background-color: #009432;/*cor dos botões*/
+    border: none; /*tirar a borda*/
+    cursor: pointer;/*curso funciona ao chegar no botão*/
+    font-weight: bold;/*melhorar a fonte do texto*/
+    text-transform: uppercase;/*deixar o texto em maiúsculo*/
+    color: #fff;/*cor de texto*/
+}
+
+#botao-cancelar{
+    background-color: red;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;/*Quebra a linha assim que um dos flex itens não puder mais ser compactado*/
+}
+
+
+/*limitar os taanhos das listagens*/
+ul li{
+    max-width: 25%;
+    list-style: none;/*estilo de lista, none= nenhum*/
+    position: relative;/*é usado quando queremos alterar a posição de um elemento tendo como referência a posição inicial dele*/
+    max-height: 280px;
+    overflow-y: hidden;/*todoo conteúdo que ultrapassar esse limite acima de (280px) não deverá ser exibido*/
+}
+
+
+ul li img{
+    width: 100%;
+}
+
+.overlay-imagem-link{
+    padding: 16px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;/*aculta-la e exibi-la apenas quando colocar o mouse sobre a imagem*/
+    transition: all ease .5s; /*vamos adicionar uma transição*/
+}
+
+.overlay-imagem-link a{
+    color: #fff;
+    text-decoration: none;/*aqui eu retiro o underline do texto*/
+}
+
+ul li:hover .overlay-imagem-link{/*quando tivermos o (ul li como hover, vamos estilizar o elemento .overlay-imagem-link)*/
+    opacity: 1;
+}
+
